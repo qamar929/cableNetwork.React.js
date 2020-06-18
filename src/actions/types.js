@@ -3,3 +3,8 @@ export const GET_ERRORS = 'GET_ERRORS';
 export const GET_RECORD = 'GET_RECORD';
 export const GET_RECORDS = 'GET_RECORDS';
 export const DELETE_RECORD = 'DELETE_RECORD';
+
+
+export const GET_TRANSACTIONS = 'GET_TRANSACTIONS';
+export const GET_TRANSACTION = 'GET_TRANSACTION';
+export const DELETE_TRANSACTION = 'DELETE_TRANSACTION';

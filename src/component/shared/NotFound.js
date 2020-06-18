@@ -6,7 +6,7 @@ class NotFound extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="error-template">
+                        <div className="error-template text-white ">
                             <h1>
                                 Oops!</h1>
                             <h2>

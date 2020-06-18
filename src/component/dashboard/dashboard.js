@@ -7,11 +7,49 @@ import RecordTable from './RecordTable'
 
 export class Dashboard extends Component {
 
+constructor(props) {
+  super(props)
+
+  this.state = {
+     Count:''
+  }
+}
 
 
     componentDidMount() {
         this.props.getRecords();
     }
+
+
+    componentWillReceiveProps(nextProps) {
+
+        // alert(nextProps.wallet.id)
+
+        if (nextProps.records) {
+            let count = 0;
+           
+            count=  nextProps.records.length;
+
+               
+
+              
+
+
+            
+
+          
+           
+            this.setState({ Count: count })
+
+           
+        }
+
+
+
+
+
+    }
+
 
 
 
@@ -39,14 +77,14 @@ export class Dashboard extends Component {
                         </button>
                                 <div className="dropdown-menu">
                                     <Link className="dropdown-item" to="/addRecord">Customer</Link>
-                                    <button disabled className="dropdown-item">Expenses</button>
+                                    <Link className="dropdown-item" to="/transaction">Daily Jounral</Link>
                                 </div>
                             </div>
                             <br />
-                            <div className="card text-center">
-                                <div className="card-header bg-success text-white">
+                            <div className="card text-center " >
+                                <div className="card-header bg-info text-white">
                                     <h4>Current Customers (Total)</h4>
-                                    <h1>Count. </h1>
+                                    <h1>Count. {this.state.Count} </h1>
                                 </div>
                             </div>
                             <hr />
